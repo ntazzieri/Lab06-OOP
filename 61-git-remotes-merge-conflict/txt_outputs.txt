@@ -1,0 +1,66 @@
+git clone https://github.com/APICe-at-DISI/OOP-git-merge-conflict-test .
+Cloning into '.'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 12 (delta 1), reused 1 (delta 1), pack-reused 8 (from 1)
+Receiving objects: 100% (12/12), done.
+Resolving deltas: 100% (2/2), done.
+
+master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/feature
+  remotes/origin/master
+
+* feature
+  master
+
+git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Auto-merging HelloWorld.java
+CONFLICT (content): Merge conflict in HelloWorld.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+On branch master
+Your branch is up to date with 'origin/master'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   HelloWorld.java
+
+[master dcbb5de] Merge branch 'feature'
+
+git remote
+origin
+personal-origin
+
+git push personal-origin master 
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (15/15), 1.57 KiB | 200.00 KiB/s, done.
+Total 15 (delta 4), reused 10 (delta 2), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), done.
+To github.com:ntazzieri/LAB06-61-OOP.git
+ * [new branch]      master -> master
+
+ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+ git branch --set-upstream-to=personal-origin/master 
+branch 'master' set up to track 'personal-origin/master'.
+
+git status
+On branch master
+Your branch is up to date with 'personal-origin/master'.
+
+nothing to commit, working tree clean
